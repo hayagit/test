@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title> My First HTMl</title>
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+	     alert("Welcome!!! You are now learning JavaScript.");
+	    </script>
+    <script type="text/javascript">
+
+	var one = 22;
+
+	var two = 3;
+
+	var add = one + two;
+
+	var minus = one - two;
+
+	var multiply = one * two;
+
+	var divide = one/two;
+
+	document.write("First No: = " + one + "<br />Second No: = " + two + " <br />");
+
+	document.write(one + " + " + two + " = " + add + "<br/>");
+
+	document.write(one + " - " + two + " = " + minus + "<br/>");
+
+	document.write(one + " * " + two + " = " + multiply + "<br/>");
+
+	document.write(one + " / " + two + " = " + divide + "<br/>");
+
+	</script>
+    <script type="text/javascript">
+
+        var students = new Array("John", "Ann", "Aaron", "Edwin", "Elizabeth");
+
+     
+        Array.prototype.displayItems = function () {
+
+            for (i = 0; i < this.length; i++) { document.write(this[i] + "<br />"); }
+
+        }
+
+        document.write("students array<br />");
+
+        students.displayItems();
+
+        document.write("<br />The number of items in students array is " + students.length + "<br />");
+
+        document.write("<br />The SORTED students array<br />");
+
+        students.sort();
+
+        students.displayItems();
+
+        document.write("<br />The REVERSED students array<br />");
+
+        students.reverse();
+
+        students.displayItems();
+
+        document.write("<br />THE students array after REMOVING the LAST item<br />");
+
+        students.pop();
+        students.displayItems();
+         document.write("<br />THE students array after push the  item<br />");
+        students.push("haya");
+        students.displayItems();
+
+	</script>
+        <script type="text/javascript">
+
+	var students = new Array("John", "Ann", "Aaron", "Edwin", "Elizabeth");
+
+	document.write("<b>Using for loops </b><br />");
+
+	for (i=0;i<students.length;i++)
+
+	{
+
+	document.write(students[i] + "<br />");
+
+	}
+
+	</script>
+        <script type="text/javascript">
+
+	document.write("<b>Using while loops </b><br />");
+
+	var i = 0, j = 1, k;
+
+	document.write("Fibonacci series less than 40<br />");
+
+	while(i<40)
+
+	{
+
+	document.write(i + "<br />");
+
+	k = i+j;
+
+	i = j;
+
+	j = k;
+
+	}
+
+	</script>
+        <script type="text/javascript">
+
+	var age = prompt("Please enter your age");
+
+	if(age>=18)
+
+	document.write("You are an adult <br />");
+
+	if(age<18)
+
+	document.write("You are NOT an adult <br />");
+
+	</script>
+        <script type="text/javascript">
+
+	var one = prompt("Enter the first number");
+
+	var two = prompt("Enter the second number");
+
+	one = parseInt(one);
+
+	two = parseInt(two);
+
+	if (one == two)
+
+	document.write(one + " is equal to " + two + ".");
+
+	else if (one<two)
+
+	document.write(one + " is less than " + two + ".");
+
+	else
+
+	document.write(one + " is greater than " + two + ".");
+
+	</script>
+        <script type="text/javascript">
+
+	function myFunction(){
+
+	document.write("This is a simple function.<br />");
+
+	}
+
+	myFunction();
+
+	</script>
+        <script type="text/javascript">
+
+	function returnSum(first, second)
+
+	{
+
+	var sum = first + second;
+
+	return sum;
+
+	}
+
+	var firstNo = 78;
+
+	var secondNo = 22;
+
+	document.write(firstNo + " + " + secondNo + " = " + returnSum(firstNo,secondNo));
+
+	</script>
+        <script type="text/javascript">
+
+
+            function createCookie(cookieName, cookieValue, daysToExpire) {
+
+                var date = new Date();
+
+                date.setTime(date.getTime() + (daysToExpire * 24 * 60 * 60 * 1000));
+
+                document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
+
+            }
+
+            function accessCookie(cookieName) {
+
+                var name = cookieName + "=";
+
+
+                var allCookieArray = document.cookie.split(';');
+
+
+                for (var i = 0; i < allCookieArray.length; i++) {
+
+
+                    var temp = allCookieArray[i].trim();
+                   
+                    if (temp.indexOf(name) == 0) return temp.substring(name.length, temp.length);
+
+                }
+
+                return "";
+
+            }
+
+            function checkCookie() {
+
+                var user = accessCookie("testCookie");
+
+                if (user != "")
+
+                    alert("Welcome Back " + user + "!!!");
+
+                else {
+
+                    user = prompt("Please enter your name");
+
+                    num = prompt("How many days you want to store your name on your computer?");
+
+                    if (user != "" && user != null) {
+
+                        createCookie("testCookie", user, num);
+
+                    }
+
+                }
+
+            }
+
+            checkCookie();
+	</script>
+
+
+       
+    </body>
+</html>
